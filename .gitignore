@@ -1,5 +1,5 @@
 node_modules
-package.json
+package-lock.json
 config1.json
 config2.json
 youtube.json
