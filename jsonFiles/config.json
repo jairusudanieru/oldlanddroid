@@ -1,0 +1,20 @@
+{
+    "token": "",
+    "clientId": "",
+    "guildId": "",
+    "ownerId": "",
+    "botId": "",
+    "modRoleId": "",
+    "smpRoleId": "",
+    "updatesRoleId": "",
+    "verifiedRoleId":"",
+    "newsPingRoleId": "",
+    "contentPingRoleId": "",
+    "minecraftChannel": "",
+    "createVoiceChannel": "",
+    "deletedTicketChannel": "",
+    "applicationChannel": "",
+    "mainVoiceChannels": ["","",""],
+    "supportCategory": "",
+    "voiceCategory": ""
+}
