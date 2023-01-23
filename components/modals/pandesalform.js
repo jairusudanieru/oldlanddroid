@@ -21,7 +21,7 @@ module.exports = {
     const ans5 = `${interaction.fields.getTextInputValue("5")}`
 
     const embed = new EmbedBuilder()
-      .setDescription(`**Minecraft Application Form**\nForm submitted by "<@${interaction.user.id}>"\n\n**Main Information**\nNickname or Name: "${ans1}"\nMinecraft Username: "${ans2}"\nMinecraft Edtion: "${ans3}"\nPremium or Cracked: "${ans4}"\n\n**Reason for Joining**\n"${ans5}"`)
+      .setDescription(`**Minecraft Application Form**\nForm submitted by "<@${interaction.user.id}>"\n\n**Main Information**\nNickname or Name: "${ans1}"\nMinecraft Username: "${ans2}"\nMinecraft Edtion: "${ans3}"\nPremium or Cracked: "${ans4}"\n\n**Why Should You Accept Me**\n"${ans5}"`)
       .setThumbnail(`https://cdn.discordapp.com/attachments/1012234151769931817/1022113962801758258/wumpus-min.png`)
       .setTimestamp()
       .setFooter({ text: `${interaction.user.id} ` })
