@@ -21,8 +21,8 @@ module.exports = {
     const ans5 = `${interaction.fields.getTextInputValue("5")}`
 
     const embed = new EmbedBuilder()
-      .setDescription(`**Minecraft Application Form**\nForm submitted by "${interaction.user.tag}"\n\n**Main Information**\nNickname or Name: "${ans1}"\nMinecraft Username: "${ans2}"\nMinecraft Edtion: "${ans3}"\nPremium or Cracked: "${ans4}"\n\n**Reason for Joining**\n"${ans5}"`)
-      .setThumbnail(interaction.user.displayAvatarURL())
+      .setDescription(`**Minecraft Application Form**\nForm submitted by "<@${interaction.user.id}>"\n\n**Main Information**\nNickname or Name: "${ans1}"\nMinecraft Username: "${ans2}"\nMinecraft Edtion: "${ans3}"\nPremium or Cracked: "${ans4}"\n\n**Reason for Joining**\n"${ans5}"`)
+      .setThumbnail(`https://cdn.discordapp.com/attachments/1012234151769931817/1022113962801758258/wumpus-min.png`)
       .setTimestamp()
       .setFooter({ text: `${interaction.user.id} ` })
       .setColor("#2f3136");
@@ -32,6 +32,11 @@ module.exports = {
         .setCustomId("whitelistadd")
         .setLabel("Add to Whitelist")
         .setEmoji("<:emoji_circleplus:1012348409769902080>")
+        .setStyle(ButtonStyle.Secondary),
+      new ButtonBuilder()
+        .setCustomId("whitelistdeny")
+        .setLabel("Reject Application")
+        .setEmoji("<:emoji_circlecross:1067128052615753748>")
         .setStyle(ButtonStyle.Secondary)
     );
 
