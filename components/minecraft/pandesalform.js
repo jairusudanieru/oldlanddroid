@@ -45,7 +45,7 @@ module.exports = {
 
         const a5 = new TextInputBuilder()
             .setCustomId("5")
-            .setLabel("Why should we Accept you to this Minecraft SMP?")
+            .setLabel("Why should we Accept you to this SMP?")
             .setPlaceholder("Write text here")
             .setRequired(true)
             .setStyle(TextInputStyle.Paragraph);
