@@ -52,6 +52,8 @@ module.exports = {
         const list = JSON.parse(values);
         const voiceChannels = list.mainVoiceChannels;
 
+        if (oldState.channel?.type == ChannelType.GuildStageVoice) return;
+
         if (!voiceChannels.includes(oldState.channelId)) {
             if (oldChannel != null && oldChannel.members.size < 1) {
                 if (!newChannel || oldChannel.id != newChannel.id) {
