@@ -23,6 +23,10 @@ module.exports = {
                 .setDescription('Help about /serverinfo'))
         .addSubcommand(subcommand =>
             subcommand
+                .setName('sourcecode')
+                .setDescription('Help about /sourcecode'))
+        .addSubcommand(subcommand =>
+            subcommand
                 .setName('pandesalform')
                 .setDescription('Help about /pandesalform')),
     async execute(interaction) {
@@ -35,6 +39,9 @@ module.exports = {
             .setColor(`#2f3136`)
         const serverinfo = new EmbedBuilder()
             .setDescription(`<:emoji_dot:1044083172784218132>**Server Info Command**\nThis command displays the Information about the server. This information includes the server's Name, Total Members, Nitro Boosts, Server Level, and Release Date.`)
+            .setColor(`#2f3136`)
+        const sourcecode = new EmbedBuilder()
+            .setDescription(`<:emoji_dot:1044083172784218132>**Source Code Command**\nThis command displays the Github Repository Link for Land Droid's Source Code.`)
             .setColor(`#2f3136`)
         const pandesalform = new EmbedBuilder()
             .setDescription(`<:emoji_dot:1044083172784218132>**Pandesal Form Command**\nThis command displays the PandesalSMP Membership Application Form. The questions here must be answered correctly and truthfully.`)
