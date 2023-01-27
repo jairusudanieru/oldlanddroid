@@ -64,6 +64,11 @@ module.exports = {
                         embeds: [serverinfo]
                     })
                     break;
+                case 'sourcecode':
+                    await interaction.reply({
+                        embeds: [sourcecode]
+                    })
+                    break;
                 case 'pandesalform':
                     await interaction.reply({
                         embeds: [pandesalform]
