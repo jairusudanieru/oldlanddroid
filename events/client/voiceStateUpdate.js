@@ -34,6 +34,7 @@ module.exports = {
                             PermissionFlagsBits.Connect,
                             PermissionFlagsBits.Speak,
                             PermissionFlagsBits.Stream,
+                            PermissionFlagsBits.UseVAD,
                         ],
                     },
                     {
