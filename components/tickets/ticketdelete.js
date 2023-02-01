@@ -14,21 +14,21 @@ module.exports = {
         const haveModRole = interaction.member.roles.cache.has(modRoleId);
 
         try {
-            if(haveModRole) {
-            await interaction.reply({
-                content: `Deleting Ticket in a few seconds.`,
-                ephemeral: true,
-            });
-            await channel.send({
-                embeds: [embed],
-            });
-            await ticket.delete();
-        } else {
-            await interaction.reply({
-                content: "Sorry, only Moderators can Delete Tickets!",
-                ephemeral: true
-            });
-        }
+            if (haveModRole) {
+                await interaction.reply({
+                    content: `Deleting Ticket in a few seconds.`,
+                    ephemeral: true,
+                });
+                await channel.send({
+                    embeds: [embed],
+                });
+                await ticket.delete();
+            } else {
+                await interaction.reply({
+                    content: "Sorry, only Moderators can Delete Tickets!",
+                    ephemeral: true
+                });
+            }
         } catch (error) {
             await interaction.reply({
                 content: "Something went wrong! Please report this to Developers.",
