@@ -18,17 +18,6 @@ module.exports = {
                     id: verifiedRoleId,
                     deny: [
                         PermissionFlagsBits.ViewChannel,
-                        PermissionFlagsBits.SendMessages,
-                        PermissionFlagsBits.EmbedLinks,
-                        PermissionFlagsBits.AttachFiles,
-                        PermissionFlagsBits.AddReactions,
-                        PermissionFlagsBits.UseExternalEmojis,
-                        PermissionFlagsBits.ReadMessageHistory,
-                        PermissionFlagsBits.Connect,
-                        PermissionFlagsBits.Speak,
-                        PermissionFlagsBits.Stream,
-                        PermissionFlagsBits.UseVAD,
-
                     ],
                 }])
                 await interaction.reply({

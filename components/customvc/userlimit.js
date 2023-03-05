@@ -28,7 +28,7 @@ module.exports = {
 
         if (buttonCooldown.has(interaction.user.id)) {
             await interaction.reply({
-                content: "Please wait 1 minute before using this button again.",
+                content: "Please wait 10 seconds before using this button again.",
                 ephemeral: true,
             });
         } else {
