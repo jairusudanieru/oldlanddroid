@@ -60,6 +60,13 @@ module.exports = (client) => {
                     }
                     break;
 
+                case "customvc":
+                    for (const file of componentFiles) {
+                        const vc = require(`../../components/${folder}/${file}`)
+                        buttons.set(vc.data.name, vc);
+                    }
+                    break;
+
                 default:
                     break;
             }

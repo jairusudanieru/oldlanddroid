@@ -14,6 +14,18 @@ module.exports = {
     async execute(oldState, newState, client) {
         const oldChannel = oldState.channel;
         const newChannel = newState.channel;
+        const row = new ActionRowBuilder().setComponents(
+            new ButtonBuilder()
+                .setCustomId("userlimit")
+                .setLabel("User Limit")
+                .setEmoji("<:emoji_person:1005010359024877598>")
+                .setStyle(ButtonStyle.Secondary),
+            new ButtonBuilder()
+                .setCustomId("privatevc")
+                .setLabel("Private VC")
+                .setEmoji("<:emoji_lock:1081997893189238864>")
+                .setStyle(ButtonStyle.Secondary)
+        );
 
         if (newState.channelId == createVoiceChannel) {
             const vcChannel = await newState.guild.channels.create({
@@ -40,13 +52,16 @@ module.exports = {
                     {
                         id: newState.member.user.id,
                         allow: [
-                            PermissionFlagsBits.ManageChannels,
-                            PermissionFlagsBits.MuteMembers,
+                            PermissionFlagsBits.ViewChannel,
                         ],
                     },
                 ],
             });
             await newState.setChannel(vcChannel);
+            await vcChannel.send({
+                content: "Manage your Voice Channel here",
+                components: [row]
+            });
         }
 
         const values = fs.readFileSync(`${__dirname}/../../jsonFiles/config.json`);
