@@ -36,7 +36,7 @@ module.exports = {
             buttonCooldown.add(interaction.user.id);
             setTimeout(() => {
                 buttonCooldown.delete(interaction.user.id);
-            }, 60000);
+            }, 10000);
         }
     },
 };  
