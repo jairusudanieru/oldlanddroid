@@ -21,7 +21,10 @@ module.exports = {
                     ],
                 }])
                 await interaction.reply({
-                    content: `<@${interaction.user.id}> sets the Channel Visibility set to: Private`
+                    content: `<@${interaction.user.id}> sets the Channel Visibility to: Private`,
+                    allowedMentions: {
+                        parse: [],
+                    },
                 })
             } else {
                 await interaction.channel.permissionOverwrites.set([{
@@ -31,7 +34,10 @@ module.exports = {
                     ],
                 }])
                 await interaction.reply({
-                    content: `<@${interaction.user.id}> sets the Channel Visibility set to: Visible`
+                    content: `<@${interaction.user.id}> sets the Channel Visibility to: Visible`,
+                    allowedMentions: {
+                        parse: [],
+                    },
                 })
             }
             buttonCooldown.add(interaction.user.id);
