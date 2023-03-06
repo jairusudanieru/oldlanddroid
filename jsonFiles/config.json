@@ -1,26 +1,22 @@
 {
-    "token": "MTAwNTUxMzA5NjQ5Nzk5MTg1MQ.GD4MSd.x5NoBLHcIOoCUaFVARG7yTojCpyy7Ry_O5oMP8",
-    "clientId": "1005513096497991851",
-    "guildId": "922903824631472160",
-    "ownerId": "846982740377075763",
-    "botId": "1005513096497991851",
-    "modRoleId": "923040228657209364",
-    "smpRoleId": "923042163808407622",
-    "updatesRoleId": "988710464768860191",
-    "verifiedRoleId": "922918899748577281",
-    "newsPingRoleId": "923041723419086878",
-    "contentPingRoleId": "923041729899298876",
-    "minecraftChannel": "985737377161052160",
-    "createVoiceChannel": "1081993787439599677",
-    "deletedTicketChannel": "1010897167969427497",
+    "token": "OTkzOTE2MDY3MDA3MTY4NjUz.Gn_p8I.Dyk3qZij1i3P4SImBVsA3E4k5XEOObC9faTcfk",
+    "clientId": "993916067007168653",
+    "guildId": "1043329676833198171",
+    "ownerId": "960421528552489020",
+    "botId": "993916067007168653",
+    "modRoleId": "1082147184755093505",
+    "smpRoleId": "1082149831683887115",
+    "verifiedRoleId": "1082147258411253790",
+    "newsPingRoleId": "1082149745100849182",
+    "contentPingRoleId": "1082149779557060700",
+    "updatesRoleId": "1082149710233604117",
+    "minecraftChannel": "1082154014193496074",
+    "createVoiceChannel": "1082154098075381814",
+    "deletedTicketChannel": "1082154351893696563",
     "applicationChannel": "1000692782731636806",
     "mainVoiceChannels": [
-        "1081994001265197209",
-        "1081993787439599677",
-        "1081993961431908474",
-        "1081933619641200720",
-        "1081933634493227229"
+        "1082154098075381814"
     ],
-    "supportCategory": "1006062789074362449",
-    "voiceCategory": "973433447966203924"
+    "supportCategory": "1082154283652354078",
+    "voiceCategory": "1082154150227361812"
 }

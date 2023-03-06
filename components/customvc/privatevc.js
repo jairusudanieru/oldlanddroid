@@ -7,6 +7,9 @@ module.exports = {
         name: "privatevc",
     },
     async execute(interaction) {
+        const channel = await interaction.guild.channels.fetch(interaction.member.voice.channelId);
+        const members = [...channel.members].map((player) => player[1].user.id);
+
         if (buttonCooldown.has(interaction.user.id)) {
             await interaction.reply({
                 content: "Please wait 1 minute before using this button again.",
@@ -14,12 +17,19 @@ module.exports = {
             });
         } else {
             if (interaction.channel.permissionsFor(verifiedRoleId).has(PermissionFlagsBits.ViewChannel)) {
-                await interaction.channel.permissionOverwrites.set([{
-                    id: verifiedRoleId,
-                    deny: [
-                        PermissionFlagsBits.ViewChannel,
-                    ],
-                }])
+                await interaction.channel.permissionOverwrites.edit(verifiedRoleId, {
+                    ViewChannel: false,
+                    SendMessages: true,
+                    EmbedLinks: true,
+                    AttachFiles: true,
+                    AddReactions: true,
+                    UseExternalEmojis: true,
+                    ReadMessageHistory: true,
+                    Connect: true,
+                    Speak: true,
+                    Stream: true,
+                    UseVAD: true,
+                })
                 await interaction.reply({
                     content: `<@${interaction.user.id}> sets the Channel Visibility to: Private`,
                     allowedMentions: {
@@ -27,22 +37,9 @@ module.exports = {
                     },
                 })
             } else {
-                await interaction.channel.permissionOverwrites.set([{
-                    id: verifiedRoleId,
-                    allow: [
-                        PermissionFlagsBits.ViewChannel,
-                        PermissionFlagsBits.SendMessages,
-                        PermissionFlagsBits.EmbedLinks,
-                        PermissionFlagsBits.AttachFiles,
-                        PermissionFlagsBits.AddReactions,
-                        PermissionFlagsBits.UseExternalEmojis,
-                        PermissionFlagsBits.ReadMessageHistory,
-                        PermissionFlagsBits.Connect,
-                        PermissionFlagsBits.Speak,
-                        PermissionFlagsBits.Stream,
-                        PermissionFlagsBits.UseVAD,
-                    ],
-                }])
+                await interaction.channel.permissionOverwrites.edit(verifiedRoleId, {
+                    ViewChannel: true,
+                })
                 await interaction.reply({
                     content: `<@${interaction.user.id}> sets the Channel Visibility to: Visible`,
                     allowedMentions: {

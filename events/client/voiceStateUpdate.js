@@ -14,7 +14,7 @@ const fs = require("fs")
 
 module.exports = {
     name: "voiceStateUpdate",
-    async execute(oldState, newState, client) {
+    async execute(oldState, newState, client, interaction) {
         const oldChannel = oldState.channel;
         const newChannel = newState.channel;
         const row = new ActionRowBuilder().setComponents(
@@ -52,12 +52,6 @@ module.exports = {
                             PermissionFlagsBits.UseVAD,
                         ],
                     },
-                    {
-                        id: newState.member.user.id,
-                        allow: [
-                            PermissionFlagsBits.ViewChannel,
-                        ],
-                    },
                 ],
             });
             await newState.setChannel(vcChannel);
@@ -73,11 +67,29 @@ module.exports = {
 
         if (oldState.channel?.type == ChannelType.GuildStageVoice) return;
 
+        if (!voiceChannels.includes(newState.channelId) && !oldChannel) {
+            await newState.channel.permissionOverwrites.create(newState.member.id, {
+                ViewChannel: true,
+                SendMessages: true,
+                EmbedLinks: true,
+                AttachFiles: true,
+                AddReactions: true,
+                UseExternalEmojis: true,
+                ReadMessageHistory: true,
+                Connect: true,
+                Speak: true,
+                Stream: true,
+                UseVAD: true,
+            })
+        }
+
         if (!voiceChannels.includes(oldState.channelId)) {
             if (oldChannel != null && oldChannel.members.size < 1) {
                 if (!newChannel || oldChannel.id != newChannel.id) {
                     await oldState.channel.delete();
                 }
+            } else if (oldChannel != null && oldChannel.members.size >= 1) {
+                await oldState.channel.permissionOverwrites.delete(oldState.member.id);
             }
         }
     },
