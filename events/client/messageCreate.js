@@ -1,5 +1,5 @@
 const { ChannelType } = require('discord.js');
-const { ownerId, modRoleId } = require('../../jsonfiles/config.json');
+const { ownerId, modRoleId } = require('../../jsonFiles/config.json');
 
 module.exports = {
     name: 'messageCreate',
