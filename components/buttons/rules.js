@@ -14,7 +14,7 @@ module.exports = {
     },
     async execute(interaction) {
         const embed = new EmbedBuilder()
-            .setImage(`https://cdn.discordapp.com/attachments/1012234151769931817/1022113960482316298/serverrules-min.png`)
+            .setImage(`https://cdn.discordapp.com/attachments/1012234151769931817/1076904447575343315/serverrules.png`)
             .setColor("#2f3136");
 
         const embed2 = new EmbedBuilder()

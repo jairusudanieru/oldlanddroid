@@ -11,7 +11,7 @@ module.exports = {
     },
     async execute(interaction) {
         const embed = new EmbedBuilder()
-            .setImage(`https://cdn.discordapp.com/attachments/1012234151769931817/1022113932082688010/assignroles-min.png`)
+            .setImage(`https://cdn.discordapp.com/attachments/1012234151769931817/1076904445490774186/assignroles.png`)
             .setColor("#2f3136");
         const embed2 = new EmbedBuilder()
             .setDescription(`<:emoji_dot:1044083172784218132>**Assign Ping Roles**\nTo make sure you are only notified for topics you want to know about. You can choose multiple roles if you want. Please kindly choose when or on what occasion you'd like to be pinged.\n\n<:emoji_dot:1044083172784218132>**Land Droid Note**\nIf you press one of the buttons and no message appears, the bot might be offline so please just try again later. Thank you!`)

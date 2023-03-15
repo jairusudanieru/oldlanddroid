@@ -11,7 +11,7 @@ module.exports = {
   },
   async execute(interaction) {
     const embed = new EmbedBuilder()
-      .setImage("https://cdn.discordapp.com/attachments/1012234151769931817/1022113935031275520/createtickets-min.png")
+      .setImage("https://cdn.discordapp.com/attachments/1012234151769931817/1076904446052810813/createtickets.png")
       .setColor("#2f3136");
     const embed2 = new EmbedBuilder()
       .setDescription("<:emoji_dot:1044083172784218132>**Create Support Ticket**\nIf you have a problem and need help, just go to <#1006063058885550200> and create a ticket so the moderators can help you. If you create a ticket for no reason, you will be warned.\n\n<:emoji_dot:1044083172784218132>**You can create a ticket...**\n<:reply_continue_1:1005018627797434449> To report a Member\n<:reply_continue_2:1005018625725452299> To report Server Bugs\n<:reply_continue_2:1005018625725452299> To claim your Server Role\n<:reply_continue_3:1005018623716372520> To ask something Important")

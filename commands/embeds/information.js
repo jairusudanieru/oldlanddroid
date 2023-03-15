@@ -15,7 +15,7 @@ module.exports = {
         .setDMPermission(false),
     async execute(interaction) {
         const embed = new EmbedBuilder()
-            .setImage(`https://cdn.discordapp.com/attachments/1012234151769931817/1022113937652731965/information-min.png`)
+            .setImage(`https://cdn.discordapp.com/attachments/1012234151769931817/1076904446832951336/information.png`)
             .setColor(`#2f3136`);
         const embed2 = new EmbedBuilder()
             .setDescription(`<:emoji_dot:1044083172784218132>**Welcome to Jairusu's Official Discord Server!**\nThank you so much for joining. This server is completely based around Jairusu to allow his followers and friends to communicate with each other.\n\n<:emoji_dot:1044083172784218132>**Server Information**\n<:reply_continue_1:1005018627797434449> Owned by: <@846982740377075763>\n<:reply_continue_3:1005018623716372520> Release Date: <t:${Math.floor(interaction.guild.createdTimestamp / 1000)}:D>`)

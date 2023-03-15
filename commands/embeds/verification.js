@@ -15,7 +15,7 @@ module.exports = {
         .setDMPermission(false),
     async execute(interaction) {
         const embed = new EmbedBuilder()
-            .setImage(`https://cdn.discordapp.com/attachments/1012234151769931817/1022113961258258442/verification-min.png`)
+            .setImage(`https://cdn.discordapp.com/attachments/1012234151769931817/1076904480567734392/verification.png`)
             .setColor("#2f3136");
         const embed2 = new EmbedBuilder()
             .setDescription(`**<:emoji_dot:1044083172784218132>Please Verify Yourself**\nThis server requires you to verify yourself to see other channels, you can simply verify by clicking the "Verify Me" button below. If that didn't worked, Direct Message an active Staff member for help.`)
