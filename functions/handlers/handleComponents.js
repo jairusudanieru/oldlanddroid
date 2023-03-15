@@ -39,13 +39,6 @@ module.exports = (client) => {
                     }
                     break;
 
-                case "minecraft":
-                    for (const file of componentFiles) {
-                        const pan = require(`../../components/${folder}/${file}`)
-                        buttons.set(pan.data.name, pan);
-                    }
-                    break;
-
                 case "pingroles":
                     for (const file of componentFiles) {
                         const ping = require(`../../components/${folder}/${file}`)

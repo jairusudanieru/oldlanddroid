@@ -24,11 +24,7 @@ module.exports = {
         .addSubcommand(subcommand =>
             subcommand
                 .setName('sourcecode')
-                .setDescription('Help about /sourcecode'))
-        .addSubcommand(subcommand =>
-            subcommand
-                .setName('pandesalform')
-                .setDescription('Help about /pandesalform')),
+                .setDescription('Help about /sourcecode')),
     async execute(interaction) {
         const help = interaction.options.getSubcommand()
         const memberinfo = new EmbedBuilder()
@@ -42,9 +38,6 @@ module.exports = {
             .setColor(`#2f3136`)
         const sourcecode = new EmbedBuilder()
             .setDescription(`<:emoji_dot:1044083172784218132>**Source Code Command**\nThis command displays the Github Repository Link for Land Droid's Source Code.`)
-            .setColor(`#2f3136`)
-        const pandesalform = new EmbedBuilder()
-            .setDescription(`<:emoji_dot:1044083172784218132>**Pandesal Form Command**\nThis command displays the PandesalSMP Membership Application Form. The questions here must be answered correctly and truthfully.`)
             .setColor(`#2f3136`)
 
         try {
@@ -67,11 +60,6 @@ module.exports = {
                 case 'sourcecode':
                     await interaction.reply({
                         embeds: [sourcecode]
-                    })
-                    break;
-                case 'pandesalform':
-                    await interaction.reply({
-                        embeds: [pandesalform]
                     })
                     break;
                 default:
